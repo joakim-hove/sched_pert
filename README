@@ -1,0 +1,22 @@
+The sched_pert program is a small application based on opm-common to perturbe
+schedule rates.
+
+1. opm-common
+
+You need a very recent version of opm-common installed, you can use the script
+install-opm.sgh to install opm-common. The script will download opm-common from
+github and build and install the opm common libraries in opm/install
+
+
+2. Build sched_pert
+
+mkdir build
+cd build
+cmake ../ -DCMAKE_PREFIX_PATH=${PWD}/../opm/install
+make
+
+
+3. Run the script
+
+sched_pert ECLIPSE.DATA
+
